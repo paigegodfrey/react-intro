@@ -1,27 +1,18 @@
 import React, { useState } from "react";
-
-/** Form for creating a new item to add to a list.
- *
- * Has state for the name/quantity of the item; on submission,
- * sends {name, qty} to fn rec'd from parent.
- *
- */
+import "./ListItemForm.css";
 
 const ListItemForm = ({ addItem }) => {
   const INITIAL_STATE = { name: "", qty: 0 };
   const [formData, setFormData] = useState(INITIAL_STATE);
 
-  /** Send {name, quantity} to parent
-   *    & clear form. */
-
+  // Send {name, qty } to parent and clear form
   const handleSubmit = evt => {
     evt.preventDefault();
     addItem(formData);
     setFormData(INITIAL_STATE);
   };
 
-  /** Update local state w/curr state of input elem */
-
+  // Update local state with current state of input element
   const handleChange = evt => {
     const { name, value } = evt.target;
     setFormData(fData => ({
@@ -29,8 +20,6 @@ const ListItemForm = ({ addItem }) => {
       [name]: value
     }));
   };
-
-  /** render form */
 
   return (
     <form onSubmit={handleSubmit}>
@@ -41,7 +30,7 @@ const ListItemForm = ({ addItem }) => {
         value={formData.name}
         onChange={handleChange}
       />
-      <label htmlFor="qty">Qty:</label>
+      <label htmlFor="qty">Quantity:</label>
       <input
         type="number"
         id="qty"
