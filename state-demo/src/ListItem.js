@@ -6,7 +6,7 @@ function ListItem({ food }) {
   const [quantity, setQuantity] = useState(0);
 
   function increment() {
-    setQuantity(qty => qty + 1);
+    setQuantity(foodQuantity => foodQuantity + 1);
   }
 
   return (

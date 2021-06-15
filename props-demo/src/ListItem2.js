@@ -3,8 +3,8 @@ import React from "react";
 function ListItem2() {
   return (
     <div className="ListItem2">
-      <h1>Item: apple</h1>
-      <h2>Quantity: 6</h2>
+      <h1>Item: banana</h1>
+      <h2>Quantity: 2</h2>
     </div>
   );
 }

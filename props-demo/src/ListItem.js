@@ -1,11 +1,11 @@
 import React from "react";
 import "./ListItem.css";
 
-function ListItem(props) {
+function ListItem({food, quantity}) {
   return (
     <div className="ListItem">
-      <h1>Item: {props.food}</h1>
-      <h2>Quantity: {props.quantity}</h2>
+      <h1>Item: {food}</h1>
+      <h2>Quantity: {quantity}</h2>
     </div>
   );
 }

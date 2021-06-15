@@ -2,6 +2,7 @@ import React from "react";
 
 export default function ListItem({ item }) {
 
+  // destructure name and qty from item object
   const { name, qty } = item;
 
   return (

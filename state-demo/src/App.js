@@ -8,8 +8,8 @@ function App() {
 
   return (
     <div className="App">
-      {defaultFoods.map(foodItem => 
-        <ListItem food={foodItem} />
+      {defaultFoods.map(food => 
+        <ListItem food={food} />
       )}
     </div>
   );
