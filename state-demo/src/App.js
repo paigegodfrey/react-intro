@@ -1,17 +1,12 @@
-import React, { useState } from "react";
-import Counter from "./Counter";
+import React from "react";
+import ListItem from "./ListItem";
 
 function App() {
 
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(count => count + 1);
-  }
-
   return (
     <div className="App">
-      <Counter count={count} increment={increment} />
+      <ListItem food="apple" />
+      <ListItem food="banana" />
     </div>
   );
 }
