@@ -23,17 +23,17 @@ const ListItemForm = ({ addItem }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
+      <label className="form-label" htmlFor="name">Name:</label>
       <input
-        id="name"
+        className="form-input"
         name="name"
         value={formData.name}
         onChange={handleChange}
       />
-      <label htmlFor="qty">Quantity:</label>
+      <label className="form-label" htmlFor="qty">Quantity:</label>
       <input
+        className="form-input"
         type="number"
-        id="qty"
         name="qty"
         value={formData.qty}
         onChange={handleChange}
