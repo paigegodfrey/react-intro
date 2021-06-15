@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ListItemForm from "../ListItemForm/ListItemForm";
-import ListItem from "../ListItem/ListItem";
+// import ListItem from "../ListItem/ListItem";
 import './ShoppingList.css'
 import { v4 as uuid } from 'uuid';
 
@@ -16,13 +16,9 @@ export default function ShoppingList() {
     <div className={`ShoppingList ${items.length ? "list-filled" : "list-empty"}`}>
       <h1>Shopping List</h1>
       <ListItemForm addItem={addItem} />
-      {items.length ? items.map(item => (
-        <ListItem item={item} key={item.id} />
-      ))
-        :
-        <h3>Your shopping list is empty!</h3> 
-      }
+      {/* map over ListItem */}
+      {/* if no items show message */}
     </div>
   );
-};
+}
 
