@@ -13,12 +13,15 @@ function ShoppingList() {
   };
 
   return (
-    <div className="ShoppingList">
+    <div className={`ShoppingList ${items.length ? "list-filled" : "list-empty"}`}>
       <h1>Shopping List</h1>
       <ListItemForm addItem={addItem} />
-      {items.map(item => (
+      {items.length ? items.map(item => (
         <ListItem item={item} key={item.id} />
-      ))}
+      ))
+        :
+        <h3>Your shopping list is empty!</h3> 
+      }
     </div>
   );
 };

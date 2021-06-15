@@ -1,3 +1,12 @@
 .ShoppingList {
+  height: 100vh;
   padding: 20px;
+}
+
+.list-filled {
+  background-color: lightgreen;
+}
+
+.list-empty {
+  background-color: lightsalmon;
 }
