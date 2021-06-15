@@ -6,8 +6,7 @@ export default function ListItem({ item }) {
 
   return (
     <div className="ListItem">
-      <h1>Item: {name}</h1>
-      <h2>Quantity: {qty}</h2>
+      <h3>{name}: {qty}</h3>
     </div>
   );
 }
