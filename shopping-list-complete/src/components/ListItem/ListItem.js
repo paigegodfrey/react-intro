@@ -1,6 +1,6 @@
 import React from "react";
 
-const ListItem = ({ item }) => {
+export default function ListItem({ item }) {
 
   const { name, qty } = item;
 
@@ -10,5 +10,3 @@ const ListItem = ({ item }) => {
     </div>
   );
 }
-
-export default ListItem;

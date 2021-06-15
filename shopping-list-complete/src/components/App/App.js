@@ -1,7 +1,7 @@
 import React from "react";
 import ShoppingList from "../ShoppingList/ShoppingList";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <ShoppingList />
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;

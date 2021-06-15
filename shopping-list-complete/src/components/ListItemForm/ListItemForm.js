@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ListItemForm.css";
 
-const ListItemForm = ({ addItem }) => {
+export default function ListItemForm({ addItem }) {
   const INITIAL_STATE = { name: "", qty: 0 };
   const [formData, setFormData] = useState(INITIAL_STATE);
 
@@ -42,5 +42,3 @@ const ListItemForm = ({ addItem }) => {
     </form>
   );
 };
-
-export default ListItemForm;

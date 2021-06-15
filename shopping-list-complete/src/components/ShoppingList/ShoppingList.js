@@ -4,7 +4,7 @@ import ListItem from "../ListItem/ListItem";
 import './ShoppingList.css'
 import { v4 as uuid } from 'uuid';
 
-function ShoppingList() {
+export default function ShoppingList() {
   const [items, setItems] = useState([]);
 
   const addItem = item => {
@@ -26,4 +26,3 @@ function ShoppingList() {
   );
 };
 
-export default ShoppingList;
