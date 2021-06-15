@@ -2,32 +2,35 @@ import React, { useState } from "react";
 import "./ListItemForm.css";
 
 export default function ListItemForm({ addItem }) {
-  const INITIAL_STATE = { name: "", qty: 0 };
-  const [formData, setFormData] = useState(INITIAL_STATE);
+  const [formData, setFormData] = useState({ food: "", qty: 0 });
 
-  // Send {name, qty } to parent and clear form
+  // Send { food, qty } to parent and clear form
   const handleSubmit = evt => {
     evt.preventDefault();
     addItem(formData);
-    setFormData(INITIAL_STATE);
+    setFormData({ food: "", qty: 0 });
   };
 
-  // Update local state with current state of input element
+  // Update local state with current state of input element (render each keystroke)
   const handleChange = evt => {
-    const { name, value } = evt.target;
+    const value = evt.target.value;
+    const name = evt.target.name;
+
     setFormData(fData => ({
       ...fData,
       [name]: value
     }));
   };
 
+  // NOTE: The name attribute on the form input fields (line 32 & 40)
+  // MUST match the formData object key names (line 5)
   return (
     <form onSubmit={handleSubmit}>
       <label className="form-label" htmlFor="name">Name:</label>
       <input
         className="form-input"
-        name="name"
-        value={formData.name}
+        name="food"
+        value={formData.food}
         onChange={handleChange}
       />
       <label className="form-label" htmlFor="qty">Quantity:</label>
